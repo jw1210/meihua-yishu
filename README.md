@@ -41,7 +41,7 @@ meihua-yishu/
 ├── SKILL.md                      # Main skill documentation
 ├── README.md                     # This file
 ├── README.zh-TW.md              # Traditional Chinese README
-├── LICENSE                       # MIT License
+├── LICENSE                       # CC BY-NC-SA 4.0 License
 ├── references/
 │   ├── 64gua.md                 # 64 Hexagrams detailed guide
 │   ├── yaoci.md                 # 384 Line texts
@@ -60,9 +60,62 @@ meihua-yishu/
 
 ## Usage
 
-### As a Claude Skill
+### As a Claude Code Skill
 
-Place this folder in your Claude Skills directory to use.
+1. Clone this repository to your Claude Code skills directory:
+   ```bash
+   # Personal skills (works across all projects)
+   git clone https://github.com/muyen/meihua-yishu.git ~/.claude/skills/meihua-yishu
+
+   # Or for a specific project
+   git clone https://github.com/muyen/meihua-yishu.git .claude/skills/meihua-yishu
+   ```
+
+2. Start a conversation and mention divination keywords like "占卦", "起卦", or "meihua" — the skill will activate automatically.
+
+### Using with Other LLMs
+
+This skill can be adapted for use with other AI platforms:
+
+#### ChatGPT (Custom GPT)
+
+1. Go to [ChatGPT](https://chat.openai.com) → Explore GPTs → Create
+2. Copy the contents of `SKILL.md` into the **Instructions** field
+3. Upload all files from `references/` to the **Knowledge** section
+4. Configure: Enable Code Interpreter for calculations
+
+#### Google Gemini (Gems)
+
+1. Go to [Gemini](https://gemini.google.com) → Gems → New Gem
+2. Copy the contents of `SKILL.md` into the system instructions
+3. For reference files, either:
+   - Paste key reference content directly into instructions, or
+   - Upload files when starting a conversation
+
+#### Other LLMs (General)
+
+For any LLM that supports system prompts:
+
+1. Use `SKILL.md` as the system prompt
+2. Include relevant reference files based on context window size:
+   - Essential: `64gua.md`, `bagua-symbols.md`
+   - For line readings: `yaoci.md`
+   - For specialized readings: `18-divinations.md`, `shiying-guide.md`
+   - For character analysis: `cezi-method.md`
+
+3. Or concatenate files for a single-file approach:
+   ```bash
+   cat SKILL.md references/*.md > meihua-complete.md
+   ```
+
+#### API Integration
+
+Use `scripts/meihua_calc.py` as a standalone calculation tool:
+```python
+from scripts.meihua_calc import calculate_hexagram
+
+result = calculate_hexagram(method="time")  # or method="num", nums=[6, 8]
+```
 
 ### Using the Python Tool
 

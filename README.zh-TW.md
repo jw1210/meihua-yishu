@@ -41,7 +41,7 @@ meihua-yishu/
 ├── SKILL.md                      # 主要技能說明文件
 ├── README.md                     # 英文說明
 ├── README.zh-TW.md              # 本文件
-├── LICENSE                       # MIT 授權
+├── LICENSE                       # CC BY-NC-SA 4.0 授權
 ├── references/
 │   ├── 64gua.md                 # 六十四卦詳解
 │   ├── yaoci.md                 # 384條爻辭全文
@@ -60,9 +60,62 @@ meihua-yishu/
 
 ## 使用方式
 
-### 作為 Claude Skill 使用
+### 作為 Claude Code Skill 使用
 
-將此資料夾放入你的 Claude Skills 目錄即可使用。
+1. 將此專案 clone 到你的 Claude Code skills 目錄：
+   ```bash
+   # 個人技能（適用於所有專案）
+   git clone https://github.com/muyen/meihua-yishu.git ~/.claude/skills/meihua-yishu
+
+   # 或針對特定專案
+   git clone https://github.com/muyen/meihua-yishu.git .claude/skills/meihua-yishu
+   ```
+
+2. 開始對話時提及占卜相關詞彙如「占卦」、「起卦」、「梅花易數」，技能會自動啟用。
+
+### 在其他 LLM 上使用
+
+本技能可移植到其他 AI 平台：
+
+#### ChatGPT（自訂 GPT）
+
+1. 前往 [ChatGPT](https://chat.openai.com) → 探索 GPT → 建立
+2. 將 `SKILL.md` 內容複製到 **Instructions** 欄位
+3. 將 `references/` 資料夾中的檔案上傳到 **Knowledge** 區域
+4. 設定：啟用 Code Interpreter 以支援計算
+
+#### Google Gemini（Gems）
+
+1. 前往 [Gemini](https://gemini.google.com) → Gems → 新增 Gem
+2. 將 `SKILL.md` 內容複製到系統指令
+3. 參考檔案可：
+   - 直接貼入關鍵內容到指令中，或
+   - 在對話開始時上傳檔案
+
+#### 其他 LLM（通用方式）
+
+支援系統提示的 LLM 皆可使用：
+
+1. 將 `SKILL.md` 作為系統提示
+2. 根據上下文窗口大小加入相關參考檔案：
+   - 基本：`64gua.md`、`bagua-symbols.md`
+   - 爻辭解讀：`yaoci.md`
+   - 專門占法：`18-divinations.md`、`shiying-guide.md`
+   - 測字分析：`cezi-method.md`
+
+3. 或合併所有檔案為單一檔案：
+   ```bash
+   cat SKILL.md references/*.md > meihua-complete.md
+   ```
+
+#### API 整合
+
+使用 `scripts/meihua_calc.py` 作為獨立計算工具：
+```python
+from scripts.meihua_calc import calculate_hexagram
+
+result = calculate_hexagram(method="time")  # 或 method="num", nums=[6, 8]
+```
 
 ### 使用 Python 計算工具
 
