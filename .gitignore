@@ -17,7 +17,5 @@ venv/
 *.swp
 *.swo
 
-# Experiment scripts (private)
-experiments/prediction-validation/scripts/
-experiments/prediction-validation/data/
-experiments/prediction-validation/requirements.txt
+# Experiments (private)
+experiments/
