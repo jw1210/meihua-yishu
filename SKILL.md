@@ -157,6 +157,8 @@ description: Meihua Yishu (梅花易數) Plum Blossom I Ching divination skill. 
 
 若用戶提供西曆日期，需轉換為農曆。可使用以下方法：
 
+> **無法執行 Python 時**：請使用網路搜尋「[西曆日期] 農曆」（如「2024年9月17日 農曆」），從搜尋結果取得農曆日期後，再用下方公式計算。
+
 #### 方法一：Python 腳本（推薦）
 
 `scripts/meihua_calc.py` 內建農曆轉換功能（無需外部依賴）：
