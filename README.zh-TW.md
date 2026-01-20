@@ -129,24 +129,32 @@ meihua-yishu/
 
 #### Google Gemini（Gems）
 
-Gems 操作介面請參考 [官方說明文件](https://support.google.com/gemini/answer/15236321?hl=zh-Hant)。
+**步驟：**
 
-**設定方式（共 10 個檔案）：**
+1. 前往 [gemini.google.com](https://gemini.google.com)
+2. 點擊左側選單「Gem 管理工具」或「Explore Gems」
+3. 點擊「新增 Gem」或「New Gem」
+4. 設定 Gem：
+   - **名稱**：梅花易數（或自訂名稱）
+   - **指令區**：複製 `SKILL.md` 的完整內容貼入
+   - **知識庫**：點擊「新增檔案」，上傳 `references/` 資料夾中的 9 個檔案
+5. 點擊「儲存」
 
-| 區域 | 檔案 | 說明 |
-|------|------|------|
-| **指令區** | `SKILL.md` | 將完整內容貼入系統指令 |
-| **知識庫** | `64gua.md` | 六十四卦詳解 |
-| | `yaoci.md` | 384 條爻辭 |
-| | `zhouyi-zhuan.md` | 彖傳象傳 |
-| | `bagua-wanwu.md` | 八卦類象+萬物賦 |
-| | `ying-guides.md` | 十應+外應指南 |
-| | `yingqi-calc.md` | 應期計算 |
-| | `18-divinations.md` | 十八類分占法 |
-| | `case-studies-expanded.md` | 經典案例 |
-| | `cezi-method.md` | 測字法 |
+> 詳細介面操作請參考 [官方說明文件](https://support.google.com/gemini/answer/15236321?hl=zh-Hant)
 
-所有參考檔案位於 `references/` 資料夾。
+**上傳檔案清單（9 個）：**
+
+| 檔案 | 說明 |
+|------|------|
+| `64gua.md` | 六十四卦詳解 |
+| `yaoci.md` | 384 條爻辭 |
+| `zhouyi-zhuan.md` | 彖傳象傳 |
+| `bagua-wanwu.md` | 八卦類象+萬物賦 |
+| `ying-guides.md` | 十應+外應指南 |
+| `yingqi-calc.md` | 應期計算 |
+| `18-divinations.md` | 十八類分占法 |
+| `case-studies-expanded.md` | 經典案例 |
+| `cezi-method.md` | 測字法 |
 
 #### 中國大模型
 

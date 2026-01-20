@@ -129,24 +129,32 @@ This skill can be adapted for use with other AI platforms:
 
 #### Google Gemini (Gems)
 
-For Gems UI navigation, see [official Gemini documentation](https://support.google.com/gemini/answer/15236321).
+**Steps:**
 
-**Setup (10 files total):**
+1. Go to [gemini.google.com](https://gemini.google.com)
+2. Click "Gem manager" or "Explore Gems" in the left sidebar
+3. Click "New Gem"
+4. Configure your Gem:
+   - **Name**: Meihua Yishu (or your preferred name)
+   - **Instructions**: Copy and paste the full content of `SKILL.md`
+   - **Knowledge**: Click "Add files" and upload all 9 files from `references/`
+5. Click "Save"
 
-| Section | File | Description |
-|---------|------|-------------|
-| **Instructions** | `SKILL.md` | Paste full content into system instructions |
-| **Knowledge** | `64gua.md` | 64 hexagrams guide |
-| | `yaoci.md` | 384 line texts |
-| | `zhouyi-zhuan.md` | Tuan & Xiang commentaries |
-| | `bagua-wanwu.md` | Bagua correspondences + verses |
-| | `ying-guides.md` | Ten responses + external signs |
-| | `yingqi-calc.md` | Timing calculation |
-| | `18-divinations.md` | 18 specific reading types |
-| | `case-studies-expanded.md` | Classic divination cases |
-| | `cezi-method.md` | Character analysis method |
+> For detailed UI navigation, see [official Gemini documentation](https://support.google.com/gemini/answer/15236321)
 
-All files are in the `references/` folder.
+**Files to upload (9 files):**
+
+| File | Description |
+|------|-------------|
+| `64gua.md` | 64 hexagrams guide |
+| `yaoci.md` | 384 line texts |
+| `zhouyi-zhuan.md` | Tuan & Xiang commentaries |
+| `bagua-wanwu.md` | Bagua correspondences + verses |
+| `ying-guides.md` | Ten responses + external signs |
+| `yingqi-calc.md` | Timing calculation |
+| `18-divinations.md` | 18 specific reading types |
+| `case-studies-expanded.md` | Classic divination cases |
+| `cezi-method.md` | Character analysis method |
 
 #### Chinese LLMs (中國大模型)
 
