@@ -91,13 +91,11 @@ meihua-yishu/
 │   ├── 64gua.md                 # 64 Hexagrams detailed guide
 │   ├── yaoci.md                 # 384 Line texts
 │   ├── zhouyi-zhuan.md          # Tuan & Xiang commentaries
-│   ├── bagua-symbols.md         # Bagua correspondences
+│   ├── bagua-wanwu.md           # Bagua correspondences + verses
 │   ├── case-studies-expanded.md # Classic divination cases
-│   ├── waiying-guide.md         # External signs guide
+│   ├── ying-guides.md           # Ten responses + external signs
 │   ├── yingqi-calc.md           # Timing calculation guide
 │   ├── 18-divinations.md        # 18 types of specific readings
-│   ├── shiying-guide.md         # Ten responses detailed guide
-│   ├── wanwu-fu.md              # Myriad things verses
 │   └── cezi-method.md           # Character analysis (測字法)
 └── scripts/
     └── meihua_calc.py           # Python calculation tool

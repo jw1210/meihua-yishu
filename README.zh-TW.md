@@ -91,13 +91,11 @@ meihua-yishu/
 │   ├── 64gua.md                 # 六十四卦詳解
 │   ├── yaoci.md                 # 384條爻辭全文
 │   ├── zhouyi-zhuan.md          # 彖傳象傳參考
-│   ├── bagua-symbols.md         # 八卦萬物類象
+│   ├── bagua-wanwu.md           # 八卦類象+萬物賦
 │   ├── case-studies-expanded.md # 經典斷卦案例
-│   ├── waiying-guide.md         # 外應指南
+│   ├── ying-guides.md           # 十應+外應指南
 │   ├── yingqi-calc.md           # 應期計算指南
 │   ├── 18-divinations.md        # 十八類分占法
-│   ├── shiying-guide.md         # 十應詳解
-│   ├── wanwu-fu.md              # 萬物賦與歌訣
 │   └── cezi-method.md           # 測字法（拆字占）
 └── scripts/
     └── meihua_calc.py           # Python 起卦計算工具
