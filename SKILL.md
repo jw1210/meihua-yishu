@@ -35,7 +35,8 @@ description: Meihua Yishu (梅花易數) Plum Blossom I Ching divination skill. 
 │   ├── ying-guides.md    ← 十應+外應指南
 │   ├── yingqi-calc.md    ← 應期計算指南
 │   ├── 18-divinations.md ← 十八類分占法
-│   └── cezi-method.md    ← 測字法（拆字占）
+│   ├── cezi-method.md    ← 測字法（拆字占）
+│   └── hexagram-relationships.md ← 卦象關係（應/承乘/互卦/錯卦/綜卦/變卦）
 └── scripts/
     └── meihua_calc.py    ← 計算工具
 ```
@@ -294,6 +295,25 @@ python meihua_calc.py lunar 2023 12 8 14
 | 用卦 | 近期 | 事情起始、當前狀態 |
 | 互卦 | 中期 | 發展過程、中間變化 |
 | 變卦 | 遠期 | 最終結果、長遠趨勢 |
+第六點五步：分析卦象關係（進階）
+詳見 `references/hexagram-relationships.md`
+
+根據統計研究，六種卦象關係對斷卦有不同影響：
+
+| 關係 | 影響力 | 何時看 |
+|------|--------|--------|
+| **互卦** | **0.73（最強）** | 每次必看，揭示內在本質 |
+| 應（二五應）| +17.2%吉率 | 問合作、求助 |
+| 承乘 | 陰乘陽50%凶 | 問職場、上下關係 |
+| 綜卦 | 64%相似 | 問感情、看對方視角 |
+| 錯卦 | 28%相反 | 看互補面 |
+| 變卦 | 38.5%變化 | 有動爻時看趨勢 |
+
+重點：
+- **互卦最重要**，影響力遠超其他關係
+- **二五應**是最強的外援指標
+- **陰乘陽**（柔凌剛）是最危險的結構
+
 第七步：推斷應期
 根據成卦之數、卦氣旺衰推斷應期。
 詳見 `references/yingqi-calc.md`
@@ -483,6 +503,8 @@ python meihua_calc.py lunar 2023 12 8 14
          ├─ 需要深入解讀？──→ 讀取 zhouyi-zhuan.md
          ├─ 需要類象具體化？──→ 讀取 bagua-wanwu.md
          ├─ 需要判斷時間？──→ 讀取 yingqi-calc.md
+         ├─ 需要分析卦象關係？──→ 讀取 hexagram-relationships.md
+         │     （應、承乘、互卦、錯卦、綜卦、變卦統計規律）
          └─ 需要參考案例？──→ 讀取 case-studies-expanded.md
 ```
 參考資料一覽
@@ -497,6 +519,7 @@ python meihua_calc.py lunar 2023 12 8 14
 | `yingqi-calc.md` | 應期推斷方法 | 需要判斷時間 |
 | `18-divinations.md` | 十八類專門占法 | 婚姻、疾病、求財等特定問題 |
 | `cezi-method.md` | 測字法指南 | 用戶提供文字進行占卜 |
+| `hexagram-relationships.md` | 卦象關係深度分析 | 分析應、承乘、互卦、錯卦、綜卦、變卦（統計驗證的規律）|
 常見問題處理
 反覆問同一問題→提醒「筮不過三」，建議接受首次卦象
 對結果不滿意→重申客觀性，多角度解讀，不改變核心判斷
