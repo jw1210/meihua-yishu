@@ -319,6 +319,10 @@ This work is licensed under the [Creative Commons Attribution-NonCommercial-Shar
 
 See [LICENSE](LICENSE) for details.
 
+## Related Projects
+
+- **[Decoding I Ching](https://github.com/muyen/decoding-iching)** — Data-driven research on I Ching patterns. Provides the 384-line database, hexagram strategy analysis, and statistical insights that complement Meihua divination.
+
 ## Contributing
 
 Issues and Pull Requests are welcome!

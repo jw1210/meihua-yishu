@@ -319,6 +319,10 @@ python scripts/meihua_calc.py num 6 8 3
 
 詳見 [LICENSE](LICENSE) 文件。
 
+## 相關專案
+
+- **[易經模式分析研究](https://github.com/muyen/decoding-iching)** — 以數據分析方法研究易經模式，提供 384 爻資料庫、卦象策略分析與統計洞見，與梅花易數占卜相輔相成。
+
 ## 貢獻
 
 歡迎提交 Issue 或 Pull Request！
