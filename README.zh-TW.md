@@ -91,14 +91,13 @@ meihua-yishu/
 │   ├── 64gua.md                 # 六十四卦詳解
 │   ├── yaoci.md                 # 384條爻辭全文
 │   ├── zhouyi-zhuan.md          # 彖傳象傳參考
-│   ├── bagua-wanwu.md           # 八卦類象+萬物賦
-│   ├── hexagram-relationships.md # 卦象關係+統計分析
+│   ├── bagua-wanwu.md           # 八卦類象+萬物賦+測字法
+│   ├── hexagram-relationships.md # 卦象關係+統計分析+通關化解
 │   ├── hexagram-strategy.md     # 六十四卦策略（留/走決策）
 │   ├── ying-guides.md           # 十應+外應指南
 │   ├── yingqi-calc.md           # 應期計算指南
 │   ├── 18-divinations.md        # 十八類分占法
-│   ├── case-studies-expanded.md # 經典斷卦案例（選用）
-│   └── cezi-method.md           # 測字法（選用）
+│   └── case-studies-expanded.md # 經典斷卦案例（選用）
 └── scripts/
     └── meihua_calc.py           # Python 起卦計算工具
 ```
@@ -123,6 +122,19 @@ git clone https://github.com/muyen/meihua-yishu.git .claude/skills/meihua-yishu
 
 安裝後，提及占卜相關詞彙如「占卦」、「起卦」、「梅花易數」，技能會自動啟用。
 
+### ChatGPT 自訂 GPT
+
+1. 前往 https://chatgpt.com/gpts/editor 建立新 GPT
+2. 將 `SKILL.md` 全部內容複製到 Instructions 欄位（必須 < 8000 字元）
+3. 將 `references/` 資料夾中的全部 10 個檔案上傳為 Knowledge
+4. 設定對話開場白：「幫我起卦」、「占一卦」、「測字」
+
+### Google Gemini Gems
+
+1. 前往 https://gemini.google.com/gems 建立新 Gem
+2. 將 `SKILL.md` 全部內容複製到 Instructions 欄位
+3. 將 `references/` 資料夾中的全部 10 個檔案上傳為 Knowledge（Gemini 限制：10 個檔案）
+4. 設定建議提示：「幫我起卦」、「占一卦」、「測字」
 
 ### 使用 Python 計算工具
 

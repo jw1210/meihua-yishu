@@ -92,14 +92,13 @@ meihua-yishu/
 │   ├── 64gua.md                 # 64 Hexagrams detailed guide
 │   ├── yaoci.md                 # 384 Line texts
 │   ├── zhouyi-zhuan.md          # Tuan & Xiang commentaries
-│   ├── bagua-wanwu.md           # Bagua correspondences + verses
-│   ├── hexagram-relationships.md # Hexagram relationships + statistical analysis
+│   ├── bagua-wanwu.md           # Bagua correspondences + verses + character analysis (測字)
+│   ├── hexagram-relationships.md # Hexagram relationships + statistical analysis + Tongguan
 │   ├── hexagram-strategy.md     # Strategy guide (stay/leave/change decisions) - CORE!
 │   ├── ying-guides.md           # Ten responses + external signs
 │   ├── yingqi-calc.md           # Timing calculation guide
 │   ├── 18-divinations.md        # 18 types of specific readings
-│   ├── case-studies-expanded.md # Classic divination cases (optional)
-│   └── cezi-method.md           # Character analysis (optional)
+│   └── case-studies-expanded.md # Classic divination cases (optional)
 └── scripts/
     └── meihua_calc.py           # Python calculation tool
 ```
@@ -124,6 +123,19 @@ git clone https://github.com/muyen/meihua-yishu.git .claude/skills/meihua-yishu
 
 Once installed, mention divination keywords like "占卦", "起卦", or "meihua" — the skill will activate automatically.
 
+### ChatGPT Custom GPT
+
+1. Create a new GPT at https://chatgpt.com/gpts/editor
+2. Copy the entire content of `SKILL.md` into the Instructions field (must be < 8000 characters)
+3. Upload all 10 files from `references/` as Knowledge files
+4. Set conversation starters: "幫我起卦", "占一卦", "測字"
+
+### Google Gemini Gems
+
+1. Create a new Gem at https://gemini.google.com/gems
+2. Copy the entire content of `SKILL.md` into the Instructions field
+3. Upload all 10 files from `references/` as Knowledge files (Gemini limit: 10 files)
+4. Set suggested prompts: "幫我起卦", "占一卦", "測字"
 
 ### Using the Python Tool
 
