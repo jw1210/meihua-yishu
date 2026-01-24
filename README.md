@@ -4,7 +4,7 @@
 
 [English](README.md) | [繁體中文](README.zh-TW.md)
 
-Meihua Yishu (梅花易數 / Plum Blossom Numerology / Plum Blossom I Ching) is a traditional Chinese I Ching divination method, attributed to Shao Yong (邵雍) of the Song Dynasty. This project provides a professional Meihua divination system as an AI Skill for Claude, ChatGPT, Gemini, DeepSeek, and other LLMs.
+Meihua Yishu (梅花易數 / Plum Blossom Numerology / Plum Blossom I Ching) is a traditional Chinese I Ching divination method, attributed to Shao Yong (邵雍) of the Song Dynasty. This project provides a professional Meihua divination system as an AI Skill for Claude Code.
 
 > Also known as: 梅花易数 (Simplified Chinese), Mei Hua Yi Shu, Plum Blossom Oracle, 梅花心易
 
@@ -124,87 +124,6 @@ git clone https://github.com/muyen/meihua-yishu.git .claude/skills/meihua-yishu
 
 Once installed, mention divination keywords like "占卦", "起卦", or "meihua" — the skill will activate automatically.
 
-### Using with Other LLMs
-
-This skill can be adapted for use with other AI platforms:
-
-#### ChatGPT (Custom GPT)
-
-1. Go to [ChatGPT](https://chat.openai.com) → Explore GPTs → Create
-2. Copy the contents of `SKILL.md` into the Instructions field
-3. Upload all files from `references/` to the Knowledge section
-4. Configure: Enable Code Interpreter for calculations
-
-#### Google Gemini (Gems)
-
-Steps:
-
-1. Go to [gemini.google.com](https://gemini.google.com)
-2. Click "Gem manager" or "Explore Gems" in the left sidebar
-3. Click "New Gem"
-4. Configure your Gem:
-   - Name: Meihua Yishu (or your preferred name)
-   - Instructions: Copy and paste the full content of `SKILL.md`
-   - Knowledge: Click "Add files" and upload all 9 files from `references/`
-5. Click "Save"
-
-> For detailed UI navigation, see [official Gemini documentation](https://support.google.com/gemini/answer/15236321)
-
-Files to upload (9 essential + 2 optional):
-
-| File | Description | Priority |
-|------|-------------|----------|
-| `64gua.md` | 64 hexagrams guide | Essential |
-| `yaoci.md` | 384 line texts | Essential |
-| `zhouyi-zhuan.md` | Tuan & Xiang commentaries | Essential |
-| `bagua-wanwu.md` | Bagua correspondences + verses | Essential |
-| `hexagram-relationships.md` | Statistical analysis of hexagram relationships | Essential |
-| `hexagram-strategy.md` | 64-hexagram strategy (stay/leave decisions) | Essential |
-| `ying-guides.md` | Ten responses + external signs | Essential |
-| `yingqi-calc.md` | Timing calculation | Essential |
-| `18-divinations.md` | 18 specific reading types | Essential |
-| `case-studies-expanded.md` | Classic divination cases | Optional |
-| `cezi-method.md` | Character analysis method | Optional |
-
-> Note: Gemini has a 10-file limit for Gems. Upload the 9 essential files + SKILL.md. Add optional files if you have room.
-
-#### Chinese LLMs (中國大模型)
-
-Supported models: DeepSeek, Kimi (月之暗面), Qwen (通义千问), 文心一言, ChatGLM (智谱清言), 豆包
-
-1. Copy the contents of `SKILL.md` into your conversation or system prompt
-2. For lunar calendar conversion (without code execution):
-   - The LLM can use web search to find lunar dates (e.g., search "2024年9月17日 農曆")
-   - Then apply the calculation formulas from `SKILL.md`
-3. Upload reference files from `references/` if the platform supports it
-
-> 💡 Most Chinese LLMs have built-in web search, which can be used for accurate lunar date conversion even without code execution capability.
-
-#### Other LLMs (General)
-
-For any LLM that supports system prompts:
-
-1. Use `SKILL.md` as the system prompt
-2. Include relevant reference files based on context window size:
-   - Essential: `64gua.md`, `bagua-wanwu.md`, `hexagram-relationships.md`
-   - For strategy: `hexagram-strategy.md` (data-driven stay/leave decisions)
-   - For line readings: `yaoci.md`
-   - For specialized readings: `18-divinations.md`, `ying-guides.md`
-   - For character analysis: `cezi-method.md`
-
-3. Or concatenate files for a single-file approach:
-   ```bash
-   cat SKILL.md references/*.md > meihua-complete.md
-   ```
-
-#### API Integration
-
-Use `scripts/meihua_calc.py` as a standalone calculation tool:
-```python
-from scripts.meihua_calc import calculate_hexagram
-
-result = calculate_hexagram(method="time")  # or method="num", nums=[6, 8]
-```
 
 ### Using the Python Tool
 
